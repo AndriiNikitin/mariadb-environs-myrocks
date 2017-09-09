@@ -3,7 +3,6 @@
 [[ -d __blddir ]] || mkdir __blddir
 
 
-
 cd __srcdir
 if [ __branch == master ] ; then
   git clone --depth=1 https://github.com/facebook/mysql-5.6 .
@@ -12,4 +11,6 @@ else
 fi
 
 cd __srcdir
-git pull
+git submodule init
+git submodule update
+
