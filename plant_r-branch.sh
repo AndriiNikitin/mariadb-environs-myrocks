@@ -21,7 +21,7 @@ wwid=${1%%-*}
 # extract number, e.g. 12
 wid=${wwid:1:100}
 
-port=$((3306+$wid))
+port=$((3706+$wid))
 
 if [ "$#" -gt 1 ] ; then
 # [ ! -z "$2" ] || { >&2 echo "Expected source directory as second parameter"; exit 2; }
